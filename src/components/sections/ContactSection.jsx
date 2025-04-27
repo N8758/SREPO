@@ -29,7 +29,7 @@ const ContactSection = () => {
               </li>
               <li>
                 <FaPhoneAlt className="contact-icon" /> 
-                <span>+91 9876543210</span>
+                <span>+91 7499650281</span>
               </li>
               <li>
                 <FaMapMarkerAlt className="contact-icon" /> 
