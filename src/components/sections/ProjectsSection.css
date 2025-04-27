@@ -1,0 +1,127 @@
+/* src/components/sections/ProjectsSection.css */
+
+.projects-section {
+    width: 100%;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #0a0a23, #1a1a40);
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .projects-title {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: fadeSlideDown 1s ease forwards;
+  }
+  
+  .projects-title span {
+    color: #00ffd9;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+    text-align: left;
+    animation: fadeInUp 2s ease forwards;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    background: rgba(0, 255, 217, 0.08);
+    border-color: #00ffd9;
+    box-shadow: 0 12px 30px rgba(0, 255, 217, 0.4);
+  }
+  
+  .project-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #00ffd9;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-skills {
+    margin-bottom: 1.5rem;
+  }
+  
+  .skill-tag {
+    display: inline-block;
+    margin: 0.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    background: rgba(0, 255, 217, 0.2);
+    font-size: 0.9rem;
+    color: #00ffd9;
+    transition: background 0.3s ease;
+  }
+  
+  .skill-tag:hover {
+    background: #00ffd9;
+    color: #0a0a23;
+  }
+  
+  .responsibilities-list {
+    padding-left: 1.2rem;
+    list-style: disc;
+  }
+  
+  .responsibilities-list li {
+    font-size: 0.95rem;
+    color: #bbbbbb;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeSlideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

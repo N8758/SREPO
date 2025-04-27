@@ -1,0 +1,25 @@
+.footer {
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(to right, #0a0a23, #1a1a40);
+    color: #ffffff;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer-content p {
+    margin: 0.5rem 0;
+  }
+  
+  .footer-content p:first-child {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .footer-content p:last-child {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #cccccc;
+  }
+  

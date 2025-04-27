@@ -1,0 +1,105 @@
+/* src/components/sections/SkillsSection.css */
+
+.skills-section {
+    width: 100%;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .skills-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .skills-title {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: fadeSlideDown 1s ease forwards;
+  }
+  
+  .skills-title span {
+    color: #00ffd9;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+  
+  .skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    transition: all 0.4s ease;
+    text-align: left;
+    animation: fadeInUp 2s ease forwards;
+  }
+  
+  .skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #00ffd9;
+  }
+  
+  .skill-card ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+  }
+  
+  .skill-card ul li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #cccccc;
+  }
+  
+  /* Hover effect */
+  .skill-card:hover {
+    transform: translateY(-8px);
+    background: rgba(0, 255, 217, 0.1);
+    border-color: #00ffd9;
+    box-shadow: 0 12px 30px rgba(0, 255, 217, 0.4);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeSlideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

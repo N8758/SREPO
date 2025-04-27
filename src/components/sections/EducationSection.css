@@ -1,0 +1,142 @@
+/* src/components/sections/EducationSection.css */
+
+.education-section {
+    width: 100%;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #1a1a40, #0a0a23);
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .education-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .education-title {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: fadeSlideDown 1s ease forwards;
+  }
+  
+  .education-title span {
+    color: #00ffd9;
+  }
+  
+  .education-timeline {
+    position: relative;
+    margin-top: 4rem;
+  }
+  
+  .education-timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: #00ffd9;
+  }
+  
+  .education-item {
+    position: relative;
+    margin: 2rem 0;
+    width: 50%;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 2s ease forwards;
+  }
+  
+  .education-item:nth-child(odd) {
+    left: 0;
+  }
+  
+  .education-item:nth-child(even) {
+    left: 50%;
+  }
+  
+  .education-dot {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #00ffd9;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    z-index: 10;
+  }
+  
+  .education-content {
+    text-align: left;
+  }
+  
+  .education-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #00ffd9;
+  }
+  
+  .college-name {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 0.5rem;
+  }
+  
+  .education-duration,
+  .education-location {
+    font-size: 1rem;
+    color: #bbbbbb;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .education-timeline::before {
+      left: 8px;
+    }
+  
+    .education-item {
+      width: 100%;
+      left: 0 !important;
+      margin-left: 2rem;
+    }
+  
+    .education-dot {
+      left: 0;
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeSlideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

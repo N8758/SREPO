@@ -1,0 +1,153 @@
+/* src/components/sections/ExperienceSection.css */
+
+.experience-section {
+    width: 100%;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #0a0a23, #1a1a40);
+    color: #ffffff;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .experience-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .experience-title {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: fadeSlideDown 1s ease forwards;
+  }
+  
+  .experience-title span {
+    color: #00ffd9;
+  }
+  
+  .timeline {
+    position: relative;
+    margin-top: 4rem;
+  }
+  
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: #00ffd9;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin: 2rem 0;
+    width: 50%;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 2s ease forwards;
+  }
+  
+  .timeline-item:nth-child(odd) {
+    left: 0;
+  }
+  
+  .timeline-item:nth-child(even) {
+    left: 50%;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #00ffd9;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    z-index: 10;
+  }
+  
+  .timeline-content {
+    text-align: left;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #00ffd9;
+  }
+  
+  .timeline-location {
+    font-size: 1rem;
+    color: #bbbbbb;
+    margin-bottom: 0.3rem;
+  }
+  
+  .timeline-company {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 1rem;
+  }
+  
+  .responsibility-list {
+    padding-left: 1.2rem;
+    list-style-type: disc;
+  }
+  
+  .responsibility-list li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #cccccc;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .timeline::before {
+      left: 8px;
+    }
+    
+    .timeline-item {
+      width: 100%;
+      left: 0 !important;
+      margin-left: 2rem;
+    }
+  
+    .timeline-dot {
+      left: 0;
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeSlideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
